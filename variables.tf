@@ -4,7 +4,7 @@ variable "role_name" {
 }
 variable "role_policy_arns" {
   type    = set(string)
-  default = toset(["arn:aws:iam::aws:policy/AdministratorAccess"])
+  default = ["arn:aws:iam::aws:policy/AdministratorAccess"]
 }
 variable "github_repository" {
   type = string
