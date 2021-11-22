@@ -10,6 +10,6 @@ module "provider-role" {
   source            = "./modules/github-actions-aws-oidc-role"
   provider_arn      = aws_iam_openid_connect_provider.provider.arn
   role_name         = var.role_name
-  policy_arns       = ["arn:aws:iam::aws:policy/AdministratorAccess"]
+  policy_arns       = var.role_policy_arns
   github_repository = var.github_repository
 }
