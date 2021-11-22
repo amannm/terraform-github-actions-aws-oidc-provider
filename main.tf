@@ -1,3 +1,11 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 2.33.0"
+    }
+  }
+}
 data "tls_certificate" "provider-certificate" {
   url = "https://token.actions.githubusercontent.com"
 }
